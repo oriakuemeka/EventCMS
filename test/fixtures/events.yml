@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2024-06-29
+  location: MyString
+  description: MyText
+  event_type: one
+  rails: MyString
+  generate: MyString
+  model: MyString
+  Attendee: MyString
+  name: MyString
+  email: MyString
+  attendance_status: false
+  rails: MyString
+  generate: MyString
+  model: MyString
+  EventType: MyString
+  name: MyString
+  rails: MyString
+  generate: MyString
+  model: MyString
+  AttendeesEvent: MyString
+  attendee: one
+  event: one
+
+two:
+  name: MyString
+  date: 2024-06-29
+  location: MyString
+  description: MyText
+  event_type: two
+  rails: MyString
+  generate: MyString
+  model: MyString
+  Attendee: MyString
+  name: MyString
+  email: MyString
+  attendance_status: false
+  rails: MyString
+  generate: MyString
+  model: MyString
+  EventType: MyString
+  name: MyString
+  rails: MyString
+  generate: MyString
+  model: MyString
+  AttendeesEvent: MyString
+  attendee: two
+  event: two
