@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :event_type
-  belongs_to :attendee
-  belongs_to :event
+  has_many :attendees_events
+  has_many :attendees, through: :attendees_events
+
 end
