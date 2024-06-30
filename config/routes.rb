@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'attendees/index'
+  get 'attendees/show'
+  get 'events/index'
+  get 'events/show'
+  get 'pages/about'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,4 +14,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get 'about', to: 'pages#about'
+
+  resources :events, only: [:index, :show]
+  resources :attendees, only: [:index, :show]
 end
