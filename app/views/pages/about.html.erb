@@ -1,8 +1,18 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#about</h1>
-  <h1>About Our Event Management System</h1>
-  <p>Our application manages events, attendees, and event types. The data is sourced from both the Faker gem and CSV files. The relationships between these data entities are illustrated in the following ERD:</p>
-  <img src="\\wsl.localhost\Ubuntu\home\unwokolo\projects\EventCMS\app\assets\images\EventCMSERD.png" alt="ERD">
+<!-- app/views/pages/about.html.erb -->
+<h1 class="text-2xl font-bold mb-4">About</h1>
 
+<p class="mb-4">EyeDCS is a comprehensive content management platform dedicated to providing information on a wide range of eye diseases, treatment options, and contact details for clinics specializing in treatment of associated eye diseases</p>
+<ul class="mb-4">
+  <li class="list-disc ml-4">Clinics data: data using Faker gem</li>
+  <li class="list-disc ml-4">Services data: data using Faker gem</li>
+  <li class="list-disc ml-4">Diseases data: data using Faker gem</li>
+</ul>
 
-</div>
+<p class="mb-4">Integration details:</p>
+<ul class="mb-4">
+  <li class="list-disc ml-4">Clinics and Services: Managed through a join table (ClinicServices)</li>
+  <li class="list-disc ml-4">Services and Diseases: Managed through a join table (DiseaseServices)</li>
+</ul>
+
+<!-- Add a class to target the image for styling -->
+<img src="/assets/EventCMSERD.png" alt="ERD Diagram" class="about-image">

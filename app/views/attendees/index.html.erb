@@ -7,4 +7,9 @@
       <%= link_to attendee.name, attendee_path(attendee) %> - <%= attendee.email %>
     </li>
   <% end %>
+
+  <div class="pagination">
+<%= paginate @attendees %>
+</div>
+
 </ul>

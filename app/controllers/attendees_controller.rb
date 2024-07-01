@@ -1,6 +1,6 @@
 class AttendeesController < ApplicationController
   def index
-    @attendees = Attendee.all
+    @attendees = Attendee.page(params[:page]).per(10)
   end
 
   def show

@@ -1,6 +1,10 @@
 <h1>All Events</h1>
 
 <% if @events.any? %>
+
+  <div class="pagination">
+<%= paginate @events %>
+</div>
 <ul>
 <% @events.each do |event| %>
 <li>

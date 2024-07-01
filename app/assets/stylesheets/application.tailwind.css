@@ -1,13 +1,54 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+ 
 /*
-
+ 
 @layer components {
   .btn-primary {
     @apply py-2 px-4 bg-blue-200;
   }
 }
-
+ 
 */
+body {
+  font-size: 0.8rem; /* Adjust as needed */
+}
+ 
+/* Adjust navigation links */
+.nav-link {
+  color: #3182ce; /* Example color, adjust as per your design */
+  font-weight: bold;
+}
+ 
+.nav-link:hover {
+  color: #2c5282; /* Example hover color */
+}
+ 
+/* Adjust footer position */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3182ce; /* Adjust background color as needed */
+  color: #fff; /* Adjust text color as needed */
+  text-align: center;
+  padding: 0.2rem 0; /* Adjust vertical padding to reduce the height */
+}
+ 
+.about-image {
+  max-width: 100%; /* Adjust the maximum width of the image */
+  height: 50%; /* Maintain aspect ratio */
+  display: block; /* Ensure the image behaves as a block element */
+  margin: auto; /* Center align the image */
+  margin-top: 20px; /* Adjust as needed to provide spacing */
+}
+ 
+.list-none {
+  list-style-type: none; /* Remove default list-style (bullets) */
+}
+main {
+  overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  /* Add other styles as needed */
+}
