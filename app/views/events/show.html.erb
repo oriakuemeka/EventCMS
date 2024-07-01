@@ -1,4 +1,10 @@
-<div>
-  <h1 class="font-bold text-4xl">Events#show</h1>
-  <p>Find me in app/views/events/show.html.erb</p>
-</div>
+<h1><%= @event.name %></h1>
+<p><%= @event.date %></p><p>
+<%= @event.location %></p><p>
+<%= @event.description %></p><p>Event Type: <%= @event.event_type.name %></p>
+<h2>Attendees</h2>
+<ul>
+  <% @event.attendees.each do |attendee| %>
+    <li><%= attendee.name %> - <%= attendee.email %></li>
+  <% end %>
+</ul>
