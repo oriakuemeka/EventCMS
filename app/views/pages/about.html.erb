@@ -1,18 +1,29 @@
 <!-- app/views/pages/about.html.erb -->
 <h1 class="text-2xl font-bold mb-4">About</h1>
 
-<p class="mb-4">EyeDCS is a comprehensive content management platform dedicated to providing information on a wide range of eye diseases, treatment options, and contact details for clinics specializing in treatment of associated eye diseases</p>
-<ul class="mb-4">
-  <li class="list-disc ml-4">Clinics data: data using Faker gem</li>
-  <li class="list-disc ml-4">Services data: data using Faker gem</li>
-  <li class="list-disc ml-4">Diseases data: data using Faker gem</li>
-</ul>
+<div class="container mx-auto px-4">
+  <p class="mb-4">Welcome to our event management platform! Our application is designed to streamline the management of events, attendees, and event types. Here is a brief overview of our key components:</p>
 
-<p class="mb-4">Integration details:</p>
-<ul class="mb-4">
-  <li class="list-disc ml-4">Clinics and Services: Managed through a join table (ClinicServices)</li>
-  <li class="list-disc ml-4">Services and Diseases: Managed through a join table (DiseaseServices)</li>
-</ul>
+  <h2 class="text-lg font-semibold mb-2">Key Components:</h2>
+
+  <ul class="mb-4">
+    <li class="mb-2">
+      <strong>Events Table:</strong> Stores details of each event, including its unique identifier (id), name, date, location, description, and event type (linked via event_type_id to EventTypes table).
+    </li>
+    <li class="mb-2">
+      <strong>EventTypes Table:</strong> Contains predefined types of events with their unique identifiers (id) and names. Each event belongs to exactly one event type.
+    </li>
+    <li class="mb-2">
+      <strong>Attendees Table:</strong> Holds information about attendees, including their unique identifier (id), name, email, and attendance status.
+    </li>
+    <li class="mb-2">
+      <strong>AttendeesEvents Table (Join Table):</strong> Facilitates the many-to-many relationship between events and attendees. It stores pairs of attendee_id and event_id to associate attendees with specific events.
+    </li>
+  </ul>
+
+  <p class="mb-4">Our platform aims to provide seamless management and coordination of events, ensuring efficient handling of attendee registrations and event types for a smooth user experience.</p>
+</div>
+
 
 <!-- Add a class to target the image for styling -->
 <img src="/assets/EventCMSERD.png" alt="ERD Diagram" class="about-image">
