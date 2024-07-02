@@ -18,35 +18,35 @@
         <div class="flex items-center space-x-6">
           <a href="<%= root_path %>" class="text-white text-lg font-semibold">Event Management</a>
           <!-- Menu Links -->
-        <ul class="flex space-x-4 text-white font-semibold list-none">
-          <li><%= link_to 'Home', root_path, class: "hover:text-gray-300" %></li>
-          <li><%= link_to 'About', about_path, class: "hover:text-gray-300" %></li>
-          <li><%= link_to 'Events', events_path, class: "hover:text-gray-300" %></li>
-          <li><%= link_to 'Attendees', attendees_path, class: "hover:text-gray-300" %></li>
-        </ul>
-      </div>
+          <ul class="flex space-x-4 text-white font-semibold list-none">
+            <li><%= link_to 'Home', root_path, class: "hover:text-gray-300" %></li>
+            <li><%= link_to 'About', about_path, class: "hover:text-gray-300" %></li>
+            <li><%= link_to 'Events', events_path, class: "hover:text-gray-300" %></li>
+            <li><%= link_to 'Attendees', attendees_path, class: "hover:text-gray-300" %></li>
+            <li><%= link_to 'Admin', admin_root_path, class: "hover:text-gray-300" %></li> <!-- ActiveAdmin link -->
+          </ul>
+        </div>
 
-      <div class="flex items-center space-x-6">
-        <!-- Combined Search and Filter Form -->
-        <%= form_with url: search_path, method: :get, class: "flex space-x-2", id: "combined-form" do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "border border-gray-300 rounded-l px-3 py-1 w-72 sm:w-auto" %>
-          <%= select_tag :event_type, options_from_collection_for_select(EventType.all, :id, :name, selected: params[:event_type]), prompt: "Select Event Type", class: "border border-gray-300 rounded-r px-3 py-1" %>
-          <%= submit_tag "Search", class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded", form: "combined-form" %>
-        <% end %>
-
+        <div class="flex items-center space-x-6">
+          <!-- Combined Search and Filter Form -->
+          <%= form_with url: search_path, method: :get, class: "flex space-x-2", id: "combined-form" do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "border border-gray-300 rounded-l px-3 py-1 w-72 sm:w-auto" %>
+            <%= select_tag :event_type, options_from_collection_for_select(EventType.all, :id, :name, selected: params[:event_type]), prompt: "Select Event Type", class: "border border-gray-300 rounded-r px-3 py-1" %>
+            <%= submit_tag "Search", class: "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded", form: "combined-form" %>
+          <% end %>
+        </div>
       </div>
+    </nav>
+  </header>
+
+  <main class="container mx-auto mt-10 px-5">
+    <%= yield %>
+  </main>
+
+  <footer class="bg-blue-900 text-white text-center py-4">
+    <div class="container mx-auto">
+      <p>&copy; <%= Time.now.year %> Event Management System. All rights reserved.</p>
     </div>
-  </nav>
-</header>
-
-<main class="container mx-auto mt-10 px-5">
-  <%= yield %>
-</main>
-
-<footer class="bg-blue-900 text-white text-center py-4">
-  <div class="container mx-auto">
-    <p>&copy; <%= Time.now.year %> Event Management System. All rights reserved.</p>
-  </div>
   </footer>
 </body>
 </html>
